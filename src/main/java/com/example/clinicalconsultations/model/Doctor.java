@@ -8,9 +8,12 @@ import jakarta.persistence.Id;
 @Entity
 public class Doctor {
 
+    // Primary key for doctor
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    // Basic doctor information
     private String name;
     private String specialty;
 

@@ -20,6 +20,7 @@ public class DoctorController {
 
     @GetMapping
     public List<Doctor> getAllDoctors() {
+        // Return all doctors from database
         return doctorRepository.findAll();
     }
 

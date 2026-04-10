@@ -13,16 +13,20 @@ import java.util.Date;
 @Entity
 public class Consultation {
 
+    // Primary key for consultation
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Date and time of the consultation
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
+    // Many consultations can belong to one patient
     @ManyToOne
     private Patient patient;
 
+    // Many consultations can belong to one doctor
     @ManyToOne
     private Doctor doctor;
 

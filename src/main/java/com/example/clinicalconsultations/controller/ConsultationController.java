@@ -30,6 +30,7 @@ public class ConsultationController {
 
     @GetMapping
     public List<Consultation> getAllConsultations() {
+        // Return all consultations from database
         return consultationRepository.findAll();
     }
 
